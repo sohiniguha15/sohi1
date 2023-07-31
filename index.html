@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Times Airlines India</title>
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+.btn-dark{
+  background-color: #b380ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('ro1.webp') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background:url('ro1.webp') ;
+    margin-bottom: 20px;
+}
+
+#services .box img{
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Clients Section */
+#client-section{
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('dp.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:black;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+    border-radius: 12px;
+    border: 2px solid white;
+    transition-duration: 0.4s;
+    transition: all 0.5s;
+}
+.btn:hover {
+  background-color: violet;
+  color: white;
+}
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 30px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.center{
+    text-align: center;
+}
+h2{
+  color: white;
+  font-family: sans-serif;
+
+}
+a:link {
+  color: #f8ede3;
+}
+a:visited {
+  color: #d09cfa;
+
+
+}
+
+a:hover {
+  color:#7D1E6A;;
+
+}
+
+a:active {
+  color: #EEB0B0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="plane1.png" width="130" height="130" ALT="align box" ALIGN=CENTER>
+        </div>
+        <ul>
+            <li class="item"><a href="index.html"  target="_parent">Home</a></li>
+            <li class="item"><a href="crew.html"  target="_parent">Flights Services</a></li>
+            <li class="item"><a href="baggage.html"  target="_parent">Baggage</a></li>
+            <li class="item"><a href="#contact"  target="_parent">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to New Times Airline</h1>
+        <h2>Book your Flight at a mininal cost and travel freely</h2>
+        <p> Happy Journey!</p>
+    <p>
+          <button class="btn"  style="vertical-align:middle"> <span> <a href="booking1.html" target="_parent">CHECK FLIGHTS</span></button></a> </p>
+    </section>
+
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Flight Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="dp.jpg" alt="">
+                <h2 class="h-secondary center">Flight Booking</h2>
+                <p class="center" style="color:white;">International travel guidelines and requirements are constantly being revised to prevent the spread of Coronavirus. New Times Airline Express has compiled a list of travel advisories related to COVID-19 for the convenience of its passengers. Information is updated as soon as official communication from the concerned authorities is received.<a href="booking1.html" target="_parent">Read more</a></p>
+            </div>
+            <div class="box">
+                <img src="Baggage.gif" alt="">
+                <h2 class="h-secondary center">Baggage</h2>
+                <p class="center" style="color:white;">New Times Airlines offers cabin baggage allowances for domestic and international travel on all its flights.
+
+DISTRIBUTION
+
+For Boeing and Airbus aircraft, the dimensions are 55 cm (22 inches) + 35 cm (14 inches) + 25 cm (10 inches).
+HE NUMBER OF PIECES AND THE WEIGHT
+AREA OF THE ECONOMY
+Only 01 piece of hand baggage having a maximum weight of 8 kg is permitted.
+Effective 01st November 2019, excess weight over and above the allowed free hand baggage allowance of 8 kg will be charged at INR 500 /kg ( GST extra) for Domestic Sectors. For travel ex and into India to US/UK/EUR/Australia/Canada charges are USD40/kg (GST extra).
+ All other international categories for travel into and out of India will be charged USD 15/kg (plus GST).
+Maximum permissible hand baggage after paying excess charges must not exceed 10 kg including Duty-Free items.
+If your handbag weighs more than 10 kg, it will not be allowed in the cabin and has to be checked in as registered baggage.<a href="baggage.html" target="_parent">Read more</a></p>
+            </div>
+            <div class="box">
+                <img src="fa2.jpg" alt="">
+                <h2 class="h-secondary center">Best Services</h2>
+                <p class="center" style="color:white;">Crew service at New Times Airlines, is an essential aspect of the airline industry. It involves the service and assistance provided by flight attendants to passengers during a flight. This includes tasks such as taking food and drink orders, assisting with seating arrangements, providing information about the flight and destination, and ensuring passenger safety and comfort.<a href="booking1.html" target="_parent">Read more</a></p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Some Happy Faces</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="babai.jpg" alt="Our Client">
+                <p> "Best for Business purpose"</p>
+            </div>
+            <div class="client-item">
+                <img src="ma.jpg" alt="Our Client">
+                  <p> "Affordable Price"</p>
+            </div>
+
+            <div class="client-item">
+                <img src="bati.jpg" alt="Our Client">
+                  <p> "Friendly Crew staff"</p>
+            </div>
+            <div class="client-item">
+                <img src="sonu.jpg" alt="Our Client">
+                  <p> "Worth the money!"</p>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="thankyou.html" method="POST">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+
+                </div>
+               <div class="form-group">
+                <label for="subject">Subject:</label>
+             <input type="text" name="subject" id="subject">
+           </div>
+
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                  <input class="btn-dark" type="submit" value="Send">
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; sohini_guha. All rights reserved!
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

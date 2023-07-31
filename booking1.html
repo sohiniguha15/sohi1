@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Times Airlines India</title>
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.btn-dark{
+  background-color: #b380ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('ro.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: block;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 2px 50px;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+}
+
+#services .box img{
+   height: 70px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Clients Section */
+#client-section{
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('dp.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.center{
+    text-align: center;
+}
+h2{
+  color:black;
+  font-family: sans-serif;
+
+}
+a{
+  colour:white;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:coral;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+
+    border-radius: 12px;
+    border: 2px solid white;
+    transition-duration: 0.4s;
+    transition: all 0.5s;
+}
+.btn:hover {
+  background-color: violet;
+  color: white;
+}
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 30px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="plane1.png" width="130" height="130" ALT="align box" ALIGN=CENTER>
+        </div>
+        <ul>
+            <li class="item"><a href="index.html"  target="_parent">Home</a></li>
+            <li class="item"><a href="crew.html"  target="_parent">Flights Services</a></li>
+            <li class="item"><a href="baggage.html"  target="_parent">Baggage</a></li>
+
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to New Times Airline</h1>
+        <h1>Book your Flight at a mininal cost and travel freely</h1>
+        <p> Happy Journey!</p>
+       </section>
+       <section id="services-container">
+           <h1 class="h-primary center">GET SPECIAL DISCOUNT OFFERS ON SPECIAL TRIP</h1>
+           <div id="services">
+               <div class="box">
+                   <a href="booking.html" target="_parent">
+                   <h2 class="h-secondary center"> SINGAPORE</h2>
+                   <p class="center" style="color:white;">Total duration: 10h 10min
+Departs on Monday, 6th February 2023
+1:05 AM Netaji Subhash Chandra Bose International Airport (CCU)
+Total time: 3 hr. 50 min
+Overnight stop
+7:25 AM Kuala Lumpur International Airport (KUL)
+Operated by New times airline.
+Economy
+Airbus A320AK 62
+Often delayed by 30+ min
+Below average legroom (28 in)
+Carbon emissions estimate: 170 kg
+5 hr 10 min Territory of Kuala Lumpur (KUL)
+12:35 PM Kuala Lumpur International Airport (KUL)
+Travel time: 1 hr 10 min
+1:45 PM Singapore Changi Airport (SIN)
+Operated by New times airline.
+Economy
+Airbus A320AK 711
+INR 18,000
+Book Flight</a></p>
+               </div>
+               <div class="box">
+                 <a href="booking.html" target="_parent">
+                 <h2 class="h-secondary center">SEOUL, SOUTH KOREA</h2>
+                   <p class="center" style="color:white;">
+                     Total duration: 14 hr 5 min
+Departs on Monday,6th February 2023
+9:45 PM Netaji Subhash Chandra Bose International Airport (CCU)
+Total time: 2 hr 40 min
+1:55 AM Suvarnabhumi Airport (BKK)
+
+Operated by IndiGo
+
+Economy
+
+6E 77
+Below average legroom (28 in)
+Carbon emissions estimate: 111 kg
+6 hr layoverBangkok (BKK)
+Overnight layover
+7:55 AM+1Suvarnabhumi Airport (BKK)
+Travel time: 5 hr 25 min
+3:20 PM Incheon International Airport (ICN)
+
+Operated by Thai AirAsia
+
+Economy
+
+XJ 708
+
+Often delayed by 30+ min
+
+INR 25,050
+.Book Now</a></p>
+               </div>
+               <div class="box">
+                   <a href="booking.html" target="_parent">
+                   <h2 class="h-secondary center">New Delhi</h2>
+                   <p class="center" style="color:white;">Total Duration: 2hr 25 min
+10:00 AM Netaji Subhash Chandra Bose International Airport (CCU)
+Total time: 2 hr 25 min
+12:25 PM Indira Gandhi International Airport (DEL)
+
+Operate by: new times airline
+
+Economy
+
+Airbus A3216E 5008
+
+INR 7,550
+Book Now</a></p>
+               </div>
+               <div class="box">
+                   <a href="booking.html" target="_parent">
+                   <h2 class="h-secondary center">Paris</h2>
+                   <p class="center" style="color:white;">Total duration: 16hr
+Departs on: Monday, 6th February 2023
+7:10 AM Netaji Subhash Chandra Bose International Airport (CCU)
+Total time: 2 hr 30 min
+9:40 AM Indira Gandhi International Airport (DEL)
+
+Operated by: Vistara
+
+Economy
+
+Airbus A320UK 720
+Below average legroom (29 in)
+In-seat USB outlet
+Stream media to your device
+
+Carbon emissions estimate: 105 kg
+4 hr 5 min lay over New Delhi (DEL)
+1:45 PM Indira Gandhi International Airport (DEL)
+Total time: 9 hr 25 min
+6:40 PM Paris Charles de Gaulle Airport (CDG)
+
+Operated by: Vistara
+
+Economy
+
+Boeing 787UK 21
+
+Often delayed by 30+ min
+
+INR 35,770
+
+</a></p>
+               </div>
+               <div class="box">
+                   <a href="booking.html" target="_parent">
+                   <h2 class="h-secondary center">GOA</h2>
+                   <p class="center" style="color:white;">Departs on Wednesday, 18 January 2023
+
+Total duration: 12h 50min
+
+Total duration:
+3h 10min
+09:30Kolkata
+Netaji Subhash Chandra Bose International Airport (CCU)
+12:40Mumbai
+Chhatrapati Shivaji International Airport (BOM)
+Terminal 2
+Flight duration 3 hours and 10 minutes
+Flight number AI 676
+Operated by Air India
+
+AIRBUS A320 (SHARKLETS)
+8h 20min
+1 stop in Chhatrapati Shivaji International Airport
+Duration 8 hours and 20 minutes
+1h 20min
+21:00Mumbai
+Chhatrapati Shivaji International Airport (BOM)
+Terminal 2
+22:20Goa
+Dabolim Airport (GOI)
+Flight duration 1 hour and 20 minutes
+Flight number AI 683
+Operated by Air India
+
+AIRBUS A320NEO
+INR 12,416
+FLEXI SAVER ECONOMY
+Check-In Baggage
+25kg
+Meals
+Complimentary
+Seat Selection
+Free for limited seats
+Preferred Seat Selection
+Chargeable From INR 200
+Earn Points
+75% to 87% of Base Points
+Change Fee
+> 72Hrs = NIL, 2-72Hrs = INR1000, < 2Hrs = No Show *See Fare Rule
+Cancel & Refund
+> 72Hrs = INR1500, 2-72Hrs = INR3000, < 2Hrs = No Show *See Fare Rule
+NoShow Fee
+INR 6000 *See Fare Rule
+NoShow Window
+2 Hours before Departure
+Book Now
+</a></p>
+               </div>
+               <div class="box">
+                   <a href="booking.html" target="_parent">
+                   <h2 class="h-secondary center">Puducherry</h2>
+                   <p class="center" style="color:white;">
+Total Duration: 8hr 10 min
+
+Departs on Monday, 6th February 2023
+
+8:05 AM Netaji Subhash Chandra Bose International Airport (CCU)
+Total time: 3 hr 30 min
+11:35 AM Kempegowda International Airport Bengaluru (BLR)
+
+Operated by: SpiceJet
+
+Economy
+
+Boeing 737MAX 8 PassengerSG 516
+Below average legroom (29 in)
+Stream media to your device
+
+Carbon emissions estimate: 91 kg
+3 hr 45 min lay over Bengaluru (BLR)
+3:20 PM Kempegowda International Airport Bengaluru (BLR)
+Total time: 55 min
+4:15 PM Puducherry Airport (PNY)
+
+Operated by: SpiceJet
+
+Economy
+
+De Havilland-Bombardier Dash-8SG 3998
+
+Often delayed by 30+ min
+
+INR 8,556
+
+Book Now</a></p>
+               </div>
+               <div class="box">
+                  <a href="booking.html" target="_parent">
+                  <h2 class="h-secondary center">MUMBAI</h2>
+                  <p class="center" style="color:white;">INR9,248
+SUPER VALUE ECONOMY
+Check-In Baggage
+25kg
+Meals
+Complimentary
+Seat Selection
+Free for limited seats
+Preferred Seat Selection
+Chargeable From INR 200
+Earn Points
+50% to 62% of Base Points
+Change Fee
+INR 2000 *See Fare Rule
+Cancel & Refund
+INR 3000 *See Fare Rule
+NoShow Fee
+Base Fare Non-Refundable
+NoShow Window
+2 Hours before Departure
+Departs on Wednesday, 18 January 2023
+
+Total duration: 3h 10min
+
+Total duration:
+3h 10min
+09:30Kolkata
+Netaji Subhash Chandra Bose International Airport (CCU)
+12:40Mumbai
+Chhatrapati Shivaji International Airport (BOM)
+Terminal 2
+Flight duration 3 hours and 10 minutes
+Flight number AI 676
+Operated by Air India
+
+AIRBUS A320 (SHARKLETS)
+
+Book Now</a></p>
+              </div>
+              <div class="box">
+                  <a href="booking.html" target="_parent">
+                  <h2 class="h-secondary center">KARNATAKA</h2>
+                  <p class="center" style="color:white;">INR11,324
+WEB SPECIAL ECONOMY
+5 seats left at this price
+Check-In Baggage
+25kg
+Meals
+Complimentary
+Seat Selection
+Free for limited seats
+Preferred Seat Selection
+Chargeable From INR 200
+Earn Points
+29% TO 33% of Base Points
+Change Fee
+INR 3000 *See Fare Rule
+Cancel & Refund
+INR 4000 *See Fare Rule
+NoShow Fee
+Base Fare Non-Refundable
+NoShow Window
+24 Hours before Departure
+09:30Kolkata
+Netaji Subhash Chandra Bose International Airport (CCU)
+12:40Mumbai
+Chhatrapati Shivaji International Airport (BOM)
+Terminal 2
+Flight duration 3 hours and 10 minutes
+Flight number AI 676
+Operated by Air India
+
+AIRBUS A320 (SHARKLETS)
+4h 0min
+1 stop in Chhatrapati Shivaji International Airport
+Duration 4 hours and 0 minutes
+1h 45min
+16:40Mumbai
+Chhatrapati Shivaji International Airport (BOM)
+Terminal 2
+18:25Bengaluru
+Kempegowda International Airport (BLR)
+Flight duration 1 hour and 45 minutes
+Flight number AI 607
+Operated by Air India
+
+AIRBUS A321
+
+Book Now</a></p>
+              </div>
+              <div class="box">
+                  <a href="booking.html" target="_parent">
+                  <h2 class="h-secondary center">CHENNAI</h2>
+                  <p class="center" style="color:white;">INR12,807
+SUPER VALUE ECONOMY
+7 seats left at this price
+Check-In Baggage
+25kg
+Meals
+Complimentary
+Seat Selection
+Free for limited seats
+Preferred Seat Selection
+Chargeable From INR 200
+Earn Points
+50% to 62% of Base Points
+Change Fee
+INR 2000 *See Fare Rule
+Cancel & Refund
+INR 3000 *See Fare Rule
+NoShow Fee
+Base Fare Non-Refundable
+NoShow Window
+2 Hours before Departure
+
+
+Book Now</a></p>
+              </div>
+            <center>  <button class="btn"  style="vertical-align:middle"> <span> <a href="booking.html" target="_parent">Choose your destination</span></button></a> </p></centre>
+           </div>
+       </section>
+       <footer>
+      <div class="center">
+          Copyright &copy; sohini_guha. All rights reserved!
+      </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>New Times Airlines|Online Payment</title>
+  <<style media="screen">
+
+
+      a:link {
+        color: red;
+      }
+
+
+      a:visited {
+        color: violet;
+      }
+
+
+      a:hover {
+        color: hotpink;
+      }
+
+      a:active {
+        color: blue;
+      }
+      footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+    </style>
+  </head>
+  <body>
+  <h2>Please wait while we make your payment..........</h2>
+  <h2> Please wait for  <span id="countdowntimer">5 </span> Seconds  and then<a href="payment_success2.html"> click here </a> to check trasaction success</h2>
+
+  <script type="text/javascript">
+      var timeleft = 5;
+      var downloadTimer = setInterval(function(){
+      timeleft--;
+      document.getElementById("countdowntimer").textContent = timeleft;
+      if(timeleft <= 0)
+          clearInterval(downloadTimer);
+      },1000);
+  </script>
+
+
+
+
+
+
+
+  </body>
+</html>
